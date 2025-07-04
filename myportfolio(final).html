@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ketan Wasekar| Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, #1f1f1f, #292929);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #a0a0a0;
+    }
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #4CAF50;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+    nav a:hover {
+      color: #4CAF50;
+    }
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    section:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+    section:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #4CAF50;
+      padding-left: 0.5rem;
+      color: #ffffff;
+    }
+    .projects, .skills {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    footer {
+      text-align: center;
+      background: #111;
+      padding: 2rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 600px) {
+      .projects, .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .projects, .skills {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ketan Wasekar</h1>
+    <p>Crafting Elegant & Responsive Web Experiences</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a full-stack web developer with a passion for clean design and performance-driven development. I bring ideas to life with modern tools, intuitive UX, and solid architecture.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Modern Landing Page</h3>
+        <p>Responsive and animated landing page for a tech startup.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Showcasing creative work, skills, and resume with smooth animations.</p>
+      </div>
+      <div class="card">
+        <h3>Blog CMS</h3>
+        <p>Full-stack content management system using Node.js and MongoDB.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">HTML5 & CSS</div>
+      <div class="card">Python</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Responsive Design</div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email:kw200555@gmail.com</p>
+    <p>GitHub: github.com/Itsketan1</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ketan Wasekar. Designed with passion & precision.</p>
+  </footer>
+
+</body>
+</html>
+
